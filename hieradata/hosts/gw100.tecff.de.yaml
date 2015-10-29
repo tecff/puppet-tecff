@@ -1,0 +1,56 @@
+---
+
+role::role_class: gateway
+
+network::interfaces_hash:
+  eth0:
+    address: 84.200.74.145
+    netmask: 255.255.255.192
+    gateway: 84.200.74.129
+  eth0_v6:
+    interface: eth0
+    family: inet6
+    address: 2001:1608:34:1000::145
+    netmask: 64
+    gateway: 2001:1608:34:1000::1
+  he-ipv6:
+    interface: he-ipv6
+    family: inet6
+    method: v4tunnel
+    address: 2001:470:1f0a:6d5::2
+    netmask: 64
+    endpoint: 216.66.80.30
+    local: 84.200.74.145
+    ttl: 255
+
+dnsmasq::interfaces:
+  - br0
+
+profile::gateway::ipv4: 10.120.0.10/16
+profile::gateway::ipv6: fdef:fc0:4ffa::10/64
+
+component::dnsmasq::pools:
+  ff:
+    dhcp_start: 10.120.0.100
+    dhcp_end: 10.120.7.254
+    netmask: 255.255.0.0
+    lease_time: 1h
+
+component::dnsmasq::dnsservers:
+  ccc:
+    ip: 213.73.91.35
+  as250:
+    ip: 194.150.168.168
+  google:
+    ip: 8.8.8.8
+
+collectd::plugin::write_graphite::carbons:
+  stats.localdomain:
+    graphitehost: 'stats.localdomain'
+    graphiteport: 42003
+
+component::fastd::instances:
+  meshvpn0:
+    public: '917d7890447588e6c8b75c61adc790cf609dd6a8f5c86878e51f60b281b0a2c4'
+    secret: 'X'
+    bind: 'any:10000'
