@@ -27,7 +27,7 @@ dnsmasq::interfaces:
   - br0
 
 profile::gateway::ipv4: 10.120.0.11/16
-profile::gateway::ipv6: fdef:fc0:4ffa::11/64
+profile::gateway::ipv6: fdef:ffc0:4ffa::11/64
 
 component::dnsmasq::pools:
   ff:
