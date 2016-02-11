@@ -3,7 +3,7 @@ define fastd (
   $public,
   $bind='any:10000',
   $mode='tap',
-  $mtu=1426,
+  $mtu=1280,
   $methods=['salsa2012+umac'],
   $user="fastd-${name}",
   $group="fastd-${name}",
