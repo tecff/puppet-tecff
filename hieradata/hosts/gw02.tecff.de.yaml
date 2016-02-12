@@ -14,16 +14,15 @@ network::interfaces_hash:
     address: 2a01:4f8:171:2b48::119
     netmask: 64
     gateway: 2a01:4f8:171:2b48::2
--- TODO: has to be moved from gw01
---  he-ipv6:
---    interface: he-ipv6
---    family: inet6
---    method: v4tunnel
---    address: 2001:470:1f0a:6d5::2
---    netmask: 64
---    endpoint: 216.66.80.30
---    local: 138.201.20.119
---    ttl: 255
+  he-ipv6:
+    interface: he-ipv6
+    family: inet6
+    method: v4tunnel
+    address: 2001:470:1f0a:6d5::2
+    netmask: 64
+    endpoint: 216.66.80.30
+    local: 138.201.20.119
+    ttl: 255
 
 dnsmasq::interfaces:
   - br0
