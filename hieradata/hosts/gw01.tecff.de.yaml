@@ -45,7 +45,3 @@ component::fastd::instances:
     public: '64f09631571fb6a6fde1e73a57a5c9536d52f15c9f82c57d7821d87d724de158'
     secret: 'X'
     bind: 'any:10000'
-  meshvpn1:
-    public: '917301c31690501c2e11868dbd9f7b430f0643baca38da0a0e7be0e71fd86eb2'
-    secret: 'X'
-    bind: 'any:10001'

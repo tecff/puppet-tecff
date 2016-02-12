@@ -52,12 +52,11 @@ collectd::plugin::write_graphite::carbons:
     graphiteport: 2003
 
 component::fastd::instances:
+  meshvpn1:
+    public: '917301c31690501c2e11868dbd9f7b430f0643baca38da0a0e7be0e71fd86eb2'
+    secret: 'X'
+    bind: 'any:10001'
   meshvpn2:
     public: 'a8ace044efbd1b8279c8110cd79f230688b81027465ae9252a49b0d474be2e32'
     secret: 'X'
     bind: 'any:10002'
--- TODO: move it from gw01 to gw02
---  meshvpn1:
---    public: '917301c31690501c2e11868dbd9f7b430f0643baca38da0a0e7be0e71fd86eb2'
---    secret: 'X'
---    bind: 'any:10001'
