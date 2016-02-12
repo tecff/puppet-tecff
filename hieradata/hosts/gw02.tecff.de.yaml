@@ -30,10 +30,9 @@ dnsmasq::interfaces:
 profile::gateway::ipv4: 10.120.0.12/16
 profile::gateway::ipv6: fdef:ffc0:4ffa::12/64
 
--- TODO: temporary smaller pool, first half still on gw01
 component::dnsmasq::pools:
   ff:
-    dhcp_start: 10.120.4.100
+    dhcp_start: 10.120.0.100
     dhcp_end: 10.120.7.254
     netmask: 255.255.248.0
     lease_time: 1h
